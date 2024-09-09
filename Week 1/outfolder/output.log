@@ -1,0 +1,30 @@
+#TYPE System.IO.FileInfo
+"PSPath","PSParentPath","PSChildName","PSDrive","PSProvider","PSIsContainer","Mode","VersionInfo","BaseName","Target","LinkType","Name","Length","DirectoryName","Directory","IsReadOnly","Exists","FullName","Extension","CreationTime","CreationTimeUtc","LastAccessTime","LastAccessTimeUtc","LastWriteTime","LastWriteTimeUtc","Attributes"
+"Microsoft.PowerShell.Core\FileSystem::C:\Users\champuser\CSI-230-01\Week 1\firstfile.ps1","Microsoft.PowerShell.Core\FileSystem::C:\Users\champuser\CSI-230-01\Week 1","firstfile.ps1","C","Microsoft.PowerShell.Core\FileSystem","False","-a----","File:             C:\Users\champuser\CSI-230-01\Week 1\firstfile.ps1
+InternalName:     
+OriginalFilename: 
+FileVersion:      
+FileDescription:  
+Product:          
+ProductVersion:   
+Debug:            False
+Patched:          False
+PreRelease:       False
+PrivateBuild:     False
+SpecialBuild:     False
+Language:         
+","firstfile","System.Collections.Generic.List`1[System.String]",,"firstfile.ps1","14","C:\Users\champuser\CSI-230-01\Week 1","C:\Users\champuser\CSI-230-01\Week 1","False","True","C:\Users\champuser\CSI-230-01\Week 1\firstfile.ps1",".ps1","8/26/2024 12:01:26 PM","8/26/2024 4:01:26 PM","8/26/2024 12:01:26 PM","8/26/2024 4:01:26 PM","8/26/2024 12:01:26 PM","8/26/2024 4:01:26 PM","Archive"
+"Microsoft.PowerShell.Core\FileSystem::C:\Users\champuser\CSI-230-01\Week 1\PowerShell Basic Lab 1.ps1","Microsoft.PowerShell.Core\FileSystem::C:\Users\champuser\CSI-230-01\Week 1","PowerShell Basic Lab 1.ps1","C","Microsoft.PowerShell.Core\FileSystem","False","-a----","File:             C:\Users\champuser\CSI-230-01\Week 1\PowerShell Basic Lab 1.ps1
+InternalName:     
+OriginalFilename: 
+FileVersion:      
+FileDescription:  
+Product:          
+ProductVersion:   
+Debug:            False
+Patched:          False
+PreRelease:       False
+PrivateBuild:     False
+SpecialBuild:     False
+Language:         
+","PowerShell Basic Lab 1","System.Collections.Generic.List`1[System.String]",,"PowerShell Basic Lab 1.ps1","2097","C:\Users\champuser\CSI-230-01\Week 1","C:\Users\champuser\CSI-230-01\Week 1","False","True","C:\Users\champuser\CSI-230-01\Week 1\PowerShell Basic Lab 1.ps1",".ps1","8/26/2024 12:02:53 PM","8/26/2024 4:02:53 PM","9/9/2024 10:53:41 AM","9/9/2024 2:53:41 PM","9/9/2024 10:53:41 AM","9/9/2024 2:53:41 PM","Archive"
