@@ -1,7 +1,7 @@
 ﻿function Get-SystemEvents {
     param ($lookback)
 
-    $systemEvents = Get-EventLog -LogName System -InstanceID 6005, 6006 -After (Get-Date).AddDays($lookback)
+    $systemEvents = Get-EventLog -LogName System | Where-Object {$_.EventID -eq 6005 -or $_.EventID -eq 6006} | Where-Object {$_.TimeGenerated -gt (Get-Date).AddDays($lookback)}
 
     $systemEventsTable = @()
     for ($i=0; $i -lt $systemEvents.Count; $i++) {
