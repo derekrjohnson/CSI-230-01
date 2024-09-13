@@ -23,8 +23,6 @@
     $systemEventsTable
 }
 
-# Call the function with the parameter and print the results on the screen
-$systemEventsResult = Get-SystemEvents -lookback -14
-$systemEventsResult | Format-Table
+
 
 

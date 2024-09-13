@@ -27,6 +27,3 @@
     $logInOutsTable
 }
 
-# Call the function with the parameter and print the results on the screen
-$logInOutsResult = Get-LogInOuts -lookback -14
-$logInOutsResult | Format-Table
