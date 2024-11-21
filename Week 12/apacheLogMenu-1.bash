@@ -1,7 +1,8 @@
 #! /bin/bash
 
 logFile="/var/log/apache2/access.log.1"
-
+iocFile="/home/champuser/CSI-230-01/Week 12/ioc.txt"
+logFile2="/var/log/apache2/access.log"
 function displayAllLogs(){
 	cat "$logFile"
 }
@@ -54,6 +55,38 @@ function frequentVisitors() {
 # the output should be almost identical to histogram
 # only with daily number of visits that are greater than 10 
 
+# Function to find suspicious visitors
+suspiciousVisitors() {
+    # Declare an associative array to store unique IP addresses
+    declare -A unique_ips
+
+    # Read the IOC entries into an array
+    mapfile -t ioc_entries < "$iocFile"
+
+    # Loop through each line in the access log file
+    while IFS= read -r line; do
+
+    	# get ip address and requested page
+    	ip_address=$(echo "$line" | awk '{print $1}')
+    	requested_page=$(echo "$line" | awk '{print $7}')
+        # Check if the requested page matches any entry in the IOC
+        for ioc in "${ioc_entries[@]}"; do
+            if [[ "$requested_page" == "$ioc" ]]; then
+			
+                # Store the unique IP address
+                unique_ips["$ip_address"]=1
+                break  # No need to check further if a match is found
+            fi
+        done
+    done < "$logFile2"
+
+    # Print the unique count of IP addresses
+    echo "Unique IP addresses: ${#unique_ips[@]}"
+    for ip in "${!unique_ips[@]}"; do
+   	    echo "$ip"
+    done
+}
+
 # function: suspiciousVisitors
 # Manually make a list of indicators of attack (ioc.txt)
 # filter the records with this indicators of attack
@@ -72,7 +105,7 @@ do
 	echo "[3] Display only pages visited"
 	echo "[4] Histogram"
 	echo "[5] Display frequent visitors"
-	# Suspicious visitors
+	echo "[6] Display suspicious visitors"
 	echo "[7] Quit"
 
 	read userInput
@@ -103,8 +136,16 @@ do
     elif [[ "$userInput" == "5" ]]; then
         echo "Displaying frequent visitors:"
     	frequentVisitors
+
+    # Display suspicious visitors
+    elif [[ "$userInput" == "6" ]]; then
+    	echo "Displaying suspicious visitors:"
+    	suspiciousVisitors
+    	
 	# Display suspicious visitors
 	# Display a message, if an invalid input is given
+
+	else 
+		echo "Please enter a valid number 1-7"
 	fi
 done
-
