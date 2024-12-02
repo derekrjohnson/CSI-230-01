@@ -55,11 +55,15 @@ function coursesByLocation(){
 # Example input: SEC
 # Example output: See the screenshots in canvas
 function coursesByAvailability() {
+	# ask for class code
+	echo -n "Enter your class code: "
+	read code
+
 	# Store course data in a variable
 	courseData=$(cut -d';' -f1,4 "$courseFile")
 
 	# iterate over each line in the courseData
-	echo "$courseData" | while IFS=';' read -r course_name seats_available; do
+	echo "$courseData" | grep "$code" | while IFS=';' read -r course_name seats_available; do
 		if [ "$seats_available" -gt 0 ]; then
 			echo "Course: $course_name, Seats available; $seats_available"
 		fi
