@@ -1,0 +1,8 @@
+To: derek.johnson01@mymail.champlain.edu
+Subject: Logins
+Dec  1 200312 xubuntu sshd[19942] pam_unix(sshdauth) authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.17.35 
+Dec  4 104306 xubuntu xfce4-screensaver-dialog pam_unix(xfce4-screensaverauth) authentication failure; logname= uid=1000 euid=1000 tty=0 ruser= rhost=  user=champuser
+Dec  4 121829 xubuntu sudo pam_unix(sudoauth) authentication failure; logname=champuser uid=1000 euid=0 tty=/dev/pts/1 ruser=champuser rhost=  user=champuser
+Dec  6 193948 xubuntu su pam_unix(suauth) authentication failure; logname=champuser uid=1000 euid=0 tty=/dev/pts/0 ruser=champuser rhost=  user=root
+Dec  6 194001 xubuntu su pam_unix(suauth) authentication failure; logname=champuser uid=1000 euid=0 tty=/dev/pts/0 ruser=champuser rhost=  user=champuser
+Dec  6 194009 xubuntu su pam_unix(suauth) authentication failure; logname=champuser uid=1000 euid=0 tty=/dev/pts/0 ruser=champuser rhost=  user=champuser
